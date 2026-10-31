@@ -20,9 +20,25 @@ namespace pr6
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Сlasses.TV TV = new Сlasses.TV();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            VideoPlayer.Source = new Uri(TV.AllChanells[0].Src);
+            VideoPlayer.Play();
+        }
+
+        private void BackChannel(object sender, RoutedEventArgs e)
+        {
+            TV.BackChanell(VideoPlayer, NameChannel);
+        }
+
+        private void NextChannel(object sender, RoutedEventArgs e)
+        {
+            TV.NextChanell(VideoPlayer, NameChannel);
         }
     }
 }
