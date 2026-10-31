@@ -29,29 +29,36 @@ namespace pr6.Сlasses
         }
 
         public List<Chanell> AllChanells = new List<Chanell>();
+        public List<Broadcast> BroadcastSkyscaper = new List<Broadcast>();
+        public List<Broadcast> Green = new List<Broadcast>();
+        public List<Broadcast> Roud = new List<Broadcast>();
+
 
         public TV()
         {
             AllChanells.Add(new Chanell()
             {
                 Name = "Городские небоскрёбы",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cityscape_at_dusk__SaveYouTube_com_.mp4"
+                Src = new List<string> { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cityscape_at_dusk__SaveYouTube_com_.mp4",
+                "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cars_driving_at_night__SaveYouTube_com_.mp4"}
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Автомобильное шоссе",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cars_driving_at_night__SaveYouTube_com_.mp4"
+                Src = new List<string> { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cars_driving_at_night__SaveYouTube_com_.mp4" }
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Природа",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\SunRaysinForest.mp4"
+                Src = new List<string> { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\SunRaysinForest.mp4" }
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Природа",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Kai Angel – welcome to forever (English Subtitles)_720p.mp4"
+                Src = new List<string> { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Kai Angel – welcome to forever (English Subtitles)_720p.mp4" }
             });
+
+            
         }
 
         public void SwapChanell(MediaElement mediaElement, Label nameChanell)
@@ -64,7 +71,7 @@ namespace pr6.Сlasses
             };
             startAnimation.Completed += delegate
             {
-                mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src);
+                mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src[0]);
                 mediaElement.Play();
 
                 DoubleAnimation endAnimation = new DoubleAnimation()
