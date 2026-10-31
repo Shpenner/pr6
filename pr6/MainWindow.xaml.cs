@@ -50,5 +50,11 @@ namespace pr6
         {
             TV.UpSound(VideoPlayer);
         }
+
+        private void SelectChanel(object sender, RoutedEventArgs e)
+        {
+            int x = int.Parse(SelectChanell.Text);
+            TV.SelectChanel(VideoPlayer, NameChannel, x);
+        }
     }
 }

@@ -60,6 +60,16 @@
                 Width="100"
                 Height="25"
                 Background="White"/>
+            <TextBox x:Name="SelectChanell" HorizontalAlignment="Left" Margin="280,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95" Height="24"/>
+            <Button
+                Click="SelectChanel"
+                Content="Выбрать канал"
+                HorizontalAlignment="Right"
+                Margin="0,0,286,10"
+                VerticalAlignment="Bottom"
+                Width="100"
+                Height="25"
+                Background="White"/>
         </Grid>
     </Grid>
 </Window>

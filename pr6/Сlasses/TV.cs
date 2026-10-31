@@ -92,6 +92,13 @@ namespace pr6.Сlasses
             SwapChanell(mediaElement, nameChanell);
         }
 
+        public void SelectChanel(MediaElement mediaElement, Label nameChanell, int x)
+        {
+            if (x > AllChanells.Count || x < AllChanells.Count) return;
+            else ActiveChanell = x - 1;
+            SwapChanell(mediaElement, nameChanell);
+        }
+
         public void UpSound(MediaElement mediaElement)
         {
             mediaElement.Volume += 0.1;
