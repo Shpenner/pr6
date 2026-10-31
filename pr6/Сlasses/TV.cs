@@ -35,17 +35,22 @@ namespace pr6.Сlasses
             AllChanells.Add(new Chanell()
             {
                 Name = "Городские небоскрёбы",
-                Src = ""
+                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cityscape_at_dusk__SaveYouTube_com_.mp4"
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Автомобильное шоссе",
-                Src = ""
+                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Cars_driving_at_night__SaveYouTube_com_.mp4"
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Природа",
-                Src = ""
+                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\SunRaysinForest.mp4"
+            });
+            AllChanells.Add(new Chanell()
+            {
+                Name = "Природа",
+                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Kai Angel – welcome to forever (English Subtitles)_720p.mp4"
             });
         }
 
@@ -87,14 +92,14 @@ namespace pr6.Сlasses
             SwapChanell(mediaElement, nameChanell);
         }
 
-        public void Upound()
+        public void UpSound(MediaElement mediaElement)
         {
-
+            mediaElement.Volume += 0.1;
         }
 
-        public void DownSound()
+        public void DownSound(MediaElement mediaElement)
         {
-
+            mediaElement.Volume -= 0.1;
         }
     }
 }

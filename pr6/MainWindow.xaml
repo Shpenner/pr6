@@ -43,6 +43,7 @@
                 Height="25"
                 Background="White"/>
             <Button
+                Click="DownSound"
                 Content="Тише"
                 HorizontalAlignment="Right"
                 Margin="0,0,115,10"
@@ -51,6 +52,7 @@
                 Height="25"
                 Background="White"/>
             <Button
+                Click="UpSound"
                 Content="Громче"
                 HorizontalAlignment="Right"
                 Margin="0,0,10,10"

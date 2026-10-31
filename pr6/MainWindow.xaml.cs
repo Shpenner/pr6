@@ -40,5 +40,15 @@ namespace pr6
         {
             TV.NextChanell(VideoPlayer, NameChannel);
         }
+
+        private void DownSound(object sender, RoutedEventArgs e)
+        {
+            TV.DownSound(VideoPlayer);
+        }
+
+        private void UpSound(object sender, RoutedEventArgs e)
+        {
+            TV.UpSound(VideoPlayer);
+        }
     }
 }
