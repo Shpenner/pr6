@@ -27,7 +27,7 @@ namespace pr6
         {
             InitializeComponent();
 
-            VideoPlayer.Source = new Uri(TV.AllChanells[0].Src[0]);
+            VideoPlayer.Source = new Uri(TV.AllChanells[0].Src);
             VideoPlayer.Play();
         }
 

@@ -55,7 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Сlasses\Broadcast.cs" />
     <Compile Include="Сlasses\Chanell.cs" />
     <Compile Include="Сlasses\TV.cs" />
     <Page Include="MainWindow.xaml">
