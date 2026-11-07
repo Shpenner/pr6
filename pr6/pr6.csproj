@@ -96,5 +96,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Videos\forest.mp4" />
+    <Content Include="Videos\road.mp4" />
+    <Content Include="Videos\skyscaper.mp4" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
