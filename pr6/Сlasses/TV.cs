@@ -70,7 +70,7 @@ namespace pr6.Сlasses
                 Name = "Природа",
                 Src = { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest.mp4", 
                     "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest3.mp4", 
-                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest.mp4" }
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\fores2.mp4" }
             });
             AllChanells.Add(new Chanell()
             {
@@ -121,7 +121,7 @@ namespace pr6.Сlasses
 
         public void SelectChanel(MediaElement mediaElement, Label nameChanell, int x)
         {
-            if (x > AllChanells.Count || x < AllChanells.Count) return;
+            if (x > AllChanells.Count || x < 0) return;
             else ActiveChanell = x - 1;
             SwapChanell(mediaElement, nameChanell);
         }

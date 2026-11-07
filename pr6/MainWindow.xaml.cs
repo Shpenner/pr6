@@ -54,8 +54,14 @@ namespace pr6
 
         private void SelectChanel(object sender, RoutedEventArgs e)
         {
-            int x = int.Parse(SelectChanell.Text);
-            TV.SelectChanel(VideoPlayer, NameChannel, x);
+            try
+            {
+                int x = int.Parse(SelectChanell.Text);
+                TV.SelectChanel(VideoPlayer, NameChannel, x);
+            }
+            catch { return; }
+
+            
         }
 
         private void NextShow(object sender, RoutedEventArgs e)

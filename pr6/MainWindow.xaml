@@ -24,6 +24,14 @@
             Margin="0,0,0,0"
             Height="50"
             VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="241*"/>
+                <ColumnDefinition Width="106*"/>
+                <ColumnDefinition Width="110*"/>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="83*"/>
+                <ColumnDefinition Width="222*"/>
+            </Grid.ColumnDefinitions>
             <Button
                 Click="BackChannel"
                 Content="Назад"
@@ -50,7 +58,7 @@
                 VerticalAlignment="Bottom"
                 Width="100"
                 Height="25"
-                Background="White"/>
+                Background="White" Grid.Column="5"/>
             <Button
                 Click="UpSound"
                 Content="Громче"
@@ -59,35 +67,23 @@
                 VerticalAlignment="Bottom"
                 Width="100"
                 Height="25"
-                Background="White"/>
-            <TextBox x:Name="SelectChanell" HorizontalAlignment="Left" Margin="465,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="26" Height="24"/>
+                Background="White" Grid.Column="5"/>
+            <TextBox x:Name="SelectChanell" Margin="8,16,4,10" TextWrapping="Wrap" Text="" Grid.Column="3"/>
             <Button
                 Click="SelectChanel"
                 Content="Выбрать канал"
-                HorizontalAlignment="Right"
-                Margin="0,0,229,10"
-                VerticalAlignment="Bottom"
-                Width="75"
-                Height="25"
-                Background="White" RenderTransformOrigin="1.087,0.573"/>
+                Margin="1,15,7,10"
+                Background="White" RenderTransformOrigin="1.087,0.573" Grid.Column="4"/>
             <Button
                 Click="BackShow"
                 Content="("
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                Width="100"
-                Height="25"
-                Margin="245,0,0,10"
-                Background="White"/>
+                Margin="3,15,3,10"
+                Background="White" Grid.Column="1"/>
             <Button
                 Click="NextShow"
                 Content=")"
-                HorizontalAlignment="Center"
-                Margin="0,15,0,0"
-                VerticalAlignment="Top"
-                Width="100"
-                Height="25"
-                Background="White"/>
+                Margin="3,15,7,10"
+                Background="White" Grid.Column="2"/>
         </Grid>
     </Grid>
 </Window>
