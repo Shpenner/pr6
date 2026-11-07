@@ -97,8 +97,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Videos\barbariki.mp4" />
+    <Content Include="Videos\bremen.mp4" />
+    <Content Include="Videos\fores2.mp4" />
     <Content Include="Videos\forest.mp4" />
+    <Content Include="Videos\forest3.mp4" />
+    <Content Include="Videos\ot_vinta.mp4" />
     <Content Include="Videos\road.mp4" />
+    <Content Include="Videos\road2.mp4" />
+    <Content Include="Videos\road3.mp4" />
+    <Content Include="Videos\scyscaper2.mp4" />
+    <Content Include="Videos\scyscaper3.mp4" />
     <Content Include="Videos\skyscaper.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

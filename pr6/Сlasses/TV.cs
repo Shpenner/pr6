@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
 
@@ -10,6 +11,24 @@ namespace pr6.Сlasses
     {
         private int activeChanell;
         private int activeVolume;
+        private int activeSrc;
+
+        public int ActiveSrc
+        {
+            get { return activeSrc; }
+            set
+            {
+                if (activeSrc < AllChanells[ActiveChanell].Src.Count - 1)
+                {
+                    activeSrc = value;
+                }
+                else
+                    activeSrc = 0;
+
+                if (activeSrc < 0)
+                    activeSrc = AllChanells[ActiveChanell].Src.Count - 1;
+            }
+        }
 
         public int ActiveChanell
         {
@@ -35,17 +54,30 @@ namespace pr6.Сlasses
             AllChanells.Add(new Chanell()
             {
                 Name = "Городские небоскрёбы",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\skyscaper.mp4"
+                Src = { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\skyscaper.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\scyscaper2.mp4",
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\scyscaper3.mp4"}
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Автомобильное шоссе",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\road.mp4"
+                Src = { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\road.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\road3.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\road2.mp4" }
             });
             AllChanells.Add(new Chanell()
             {
                 Name = "Природа",
-                Src = "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest.mp4"
+                Src = { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest3.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\forest.mp4" }
+            });
+            AllChanells.Add(new Chanell()
+            {
+                Name = "Мультики",
+                Src = { "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\barbariki.mp4", 
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\ot_vinta.mp4",
+                    "C:\\Users\\student-a502.PERMAVIAT\\Downloads\\Новая папка (3)\\pr6\\Videos\\bremen.mp4"}
             });
         }
 
@@ -59,7 +91,7 @@ namespace pr6.Сlasses
             };
             startAnimation.Completed += delegate
             {
-                mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src);
+                mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src[0]);
                 mediaElement.Play();
 
                 DoubleAnimation endAnimation = new DoubleAnimation()
@@ -102,6 +134,18 @@ namespace pr6.Сlasses
         public void DownSound(MediaElement mediaElement)
         {
             mediaElement.Volume -= 0.1;
+        }
+
+        public void NextShow(MediaElement mediaElement, Label nameChanell)
+        {
+            ActiveSrc++;
+            mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src[ActiveSrc]);
+        }
+
+        public void BackShow(MediaElement mediaElement, Label nameChanell)
+        {
+            ActiveSrc--;
+            mediaElement.Source = new Uri(AllChanells[ActiveChanell].Src[ActiveSrc]);
         }
     }
 }

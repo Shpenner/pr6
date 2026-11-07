@@ -27,7 +27,7 @@ namespace pr6
         {
             InitializeComponent();
 
-            VideoPlayer.Source = new Uri(TV.AllChanells[0].Src);
+            VideoPlayer.Source = new Uri(TV.AllChanells[0].Src[0]);
             NameChannel.Content = TV.AllChanells[0].Name;
             VideoPlayer.Play();
         }
@@ -56,6 +56,16 @@ namespace pr6
         {
             int x = int.Parse(SelectChanell.Text);
             TV.SelectChanel(VideoPlayer, NameChannel, x);
+        }
+
+        private void NextShow(object sender, RoutedEventArgs e)
+        {
+            TV.NextShow(VideoPlayer, NameChannel);
+        }
+
+        private void BackShow(object sender, RoutedEventArgs e)
+        {
+            TV.BackShow(VideoPlayer, NameChannel);
         }
     }
 }

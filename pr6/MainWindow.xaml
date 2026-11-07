@@ -60,13 +60,31 @@
                 Width="100"
                 Height="25"
                 Background="White"/>
-            <TextBox x:Name="SelectChanell" HorizontalAlignment="Left" Margin="280,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95" Height="24"/>
+            <TextBox x:Name="SelectChanell" HorizontalAlignment="Left" Margin="465,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="26" Height="24"/>
             <Button
                 Click="SelectChanel"
                 Content="Выбрать канал"
                 HorizontalAlignment="Right"
-                Margin="0,0,286,10"
+                Margin="0,0,229,10"
                 VerticalAlignment="Bottom"
+                Width="75"
+                Height="25"
+                Background="White" RenderTransformOrigin="1.087,0.573"/>
+            <Button
+                Click="BackShow"
+                Content="("
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Width="100"
+                Height="25"
+                Margin="245,0,0,10"
+                Background="White"/>
+            <Button
+                Click="NextShow"
+                Content=")"
+                HorizontalAlignment="Center"
+                Margin="0,15,0,0"
+                VerticalAlignment="Top"
                 Width="100"
                 Height="25"
                 Background="White"/>
